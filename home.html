@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="code/favicon-32x32.png" />
+  <link rel="stylesheet" href="code/home.css">
+</head>
+<body>
+
+
+  <div class="bg-flash" aria-hidden="true"></div>
+
+
+  <div class="content">
+    <label class="switch">
+      <input type="checkbox" id="toggleSwitch" />
+      <span class="slider"></span>
+    </label>
+
+    <h1>TURN ON</h1>
+    <div class="big-text">THE SWITCH</div>
+  </div>
+
+  <script>
+   
+    window.addEventListener("pageshow", () => {
+      const t = document.getElementById("toggleSwitch");
+      if (t) t.checked = false;
+    });
+
+ 
+    document.getElementById("toggleSwitch").addEventListener("change", function () {
+      if (this.checked) {
+        setTimeout(() => {
+          window.location.href = "code/candle.html";
+        }, 1000);
+      }
+    });
+  </script>
+</body>
+</html>
